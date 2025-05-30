@@ -20,7 +20,7 @@ export default function Header() {
                     {/* Logo */}
                     <Link
                         href="/"
-                        className="w-[100px] md:w-[150px] h-[64px] flex justify-center items-center bg-[#2E2E2E] rounded-b-md shrink-0"
+                        className="w-[70px] md:w-[150px] h-[64px] flex justify-center items-center bg-[#2E2E2E] rounded-b-md shrink-0"
                     >
                         <Image
                             src="/image 2.svg"
