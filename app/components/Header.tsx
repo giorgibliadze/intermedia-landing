@@ -13,7 +13,7 @@ export default function Header() {
     return (
         <header className="w-full h-[79px] md:h-[64px] border-b border-[#E5E5E5] bg-white items-center">
 
-            <div className="w-[100%] mx-auto max-w-[100%] px-[0px] md:px-[64px] pb-[24px] flex flex-col isolate relative">
+            <div className="w-[100%] max-w-[100%] px-[0px] md:px-[44px] pb-[24px] flex flex-col isolate relative">
 
                 {/* Header Row */}
                 <div className="flex justify-between md:items-start px-[15px] md:px-[0px] gap-[20px]">
