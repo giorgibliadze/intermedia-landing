@@ -18,13 +18,13 @@ export default function Header() {
                     {/* Logo */}
                     <Link
                         href="/"
-                        className="w-[76px] h-[64px] flex justify-center items-center bg-[#2E2E2E] rounded-b-md shrink-0"
+                        className="w-[100px] md:w-[150px] h-[64px] flex justify-center items-center bg-[#2E2E2E] rounded-b-md shrink-0"
                     >
                         <Image
                             src="/image 2.svg"
                             alt="Intermedia Logo"
-                            width={64}
-                            height={64}
+                            width={150}
+                            height={150}
                             priority
                         />
                     </Link>
