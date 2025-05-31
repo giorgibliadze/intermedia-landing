@@ -41,12 +41,14 @@ export default function GiraffeHighlightSwiper() {
 
                     {/* Arrows */}
                     <button
+                        name="prev"
                         onClick={prevSlide}
                         className="absolute left-2 top-1/2 -translate-y-1/2 bg-white text-black rounded-full shadow-md w-10 h-10 flex items-center justify-center z-10"
                     >
                         <FaChevronLeft />
                     </button>
                     <button
+                        name="next"
                         onClick={nextSlide}
                         className="absolute right-2 top-1/2 -translate-y-1/2 bg-white text-black rounded-full shadow-md w-10 h-10 flex items-center justify-center z-10"
                     >
