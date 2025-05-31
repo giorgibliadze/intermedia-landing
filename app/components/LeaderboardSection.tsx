@@ -35,16 +35,10 @@ export default function LeaderboardSection() {
 
     return (
         <>
-            <GiraffeHighlightSwiper />
 
             <section className="w-full bg-white px-4 py-8">
-                {/* Divider Line */}
-                <div className="max-w-[1300px] mx-auto mb-6">
-                    <div className="h-[3px] w-full bg-gradient-to-r from-white/0 via-white to-white/0" />
-                </div>
-
-                {/* Grid */}
-                <div className="max-w-[1300px] mx-auto grid grid-cols-2 md:grid-col-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <GiraffeHighlightSwiper />
+                <div className="max-w-full mx-auto grid grid-cols-2 md:grid-col-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 bg-white">
                     {leaderboardData.map((user, index) => (
                         <LeaderboardCard
                             key={index}
@@ -55,6 +49,7 @@ export default function LeaderboardSection() {
                         />
                     ))}
                 </div>
+
             </section>
         </>
     );

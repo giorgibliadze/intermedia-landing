@@ -1,56 +1,57 @@
 "use client";
 
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Autoplay } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/navigation";
+import { useState } from "react";
 import { useMediaQuery } from "react-responsive";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
+const slides = ["/giraffe.png", "/preview.png", "/Pic.png"];
+
 export default function GiraffeHighlightSwiper() {
     const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
+    const [current, setCurrent] = useState(0);
 
-    const slides = ["/giraffe.png", "/preview.png", "/Pic.png"];
+    const prevSlide = () => {
+        setCurrent((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
+    };
+
+    const nextSlide = () => {
+        setCurrent((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
+    };
 
     return (
         <section className="w-full bg-white px-4 pt-8">
             {isMobile ? (
-                <div className="max-w-[500px] mx-auto relative">
-                    <Swiper
-                        modules={[Navigation, Autoplay]}
-                        spaceBetween={16}
-                        slidesPerView={1}
-                        navigation={{
-                            nextEl: ".swiper-button-next",
-                            prevEl: ".swiper-button-prev"
-                        }}
-                        autoplay={{ delay: 4000, disableOnInteraction: false }}
-                    >
-                        {slides.map((src, index) => (
-                            <SwiperSlide key={index}>
-                                <div className="relative w-full h-[500px] rounded-md overflow-hidden">
-                                    <img src={src} alt="slide" className="object-cover w-full h-full" />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent p-4 flex flex-col justify-end">
-                                        <h3 className="text-white text-xl font-semibold mb-2">
-                                            ვინ იყო ვახტანგ გორგასლის დედა?
-                                        </h3>
-                                        <div className="flex flex-col text-sm text-gray-300">
-                                            <span className="flex items-center gap-2">👁 18,000 ნახვა</span>
-                                            <span>🕒 3 წუთის საკითხავი</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </SwiperSlide>
-                        ))}
+                <div className="relative max-w-[400px] mx-auto">
+                    <div className="relative w-full h-[400px] rounded-xl overflow-hidden">
+                        <img
+                            src={slides[current]}
+                            alt={`slide-${current}`}
+                            className="object-cover w-full h-full"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent p-4 flex flex-col justify-end">
+                            <h3 className="text-white text-xl font-semibold mb-2">
+                                ვინ იყო ვახტანგ გორგასლის დედა?
+                            </h3>
+                            <div className="flex flex-col text-sm text-gray-300">
+                                <span className="flex items-center gap-2">👁 18,000 ნახვა</span>
+                                <span>🕒 3 წუთის საკითხავი</span>
+                            </div>
+                        </div>
+                    </div>
 
-                        {/* Custom arrows with icons */}
-                        <div className="swiper-button-prev bg-white text-black rounded-full shadow-md w-10 h-10 flex items-center justify-center absolute left-2 top-1/2 -translate-y-1/2 z-10">
-                            <FaChevronLeft className="text-lg" />
-                        </div>
-                        <div className="swiper-button-next bg-white text-black rounded-full shadow-md w-10 h-10 flex items-center justify-center absolute right-2 top-1/2 -translate-y-1/2 z-10">
-                            <FaChevronRight className="text-lg" />
-                        </div>
-                    </Swiper>
+                    {/* Arrows */}
+                    <button
+                        onClick={prevSlide}
+                        className="absolute left-2 top-1/2 -translate-y-1/2 bg-white text-black rounded-full shadow-md w-10 h-10 flex items-center justify-center z-10"
+                    >
+                        <FaChevronLeft />
+                    </button>
+                    <button
+                        onClick={nextSlide}
+                        className="absolute right-2 top-1/2 -translate-y-1/2 bg-white text-black rounded-full shadow-md w-10 h-10 flex items-center justify-center z-10"
+                    >
+                        <FaChevronRight />
+                    </button>
                 </div>
             ) : (
                 <div className="max-w-[1300px] min-h-[500px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
