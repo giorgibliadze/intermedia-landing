@@ -1,18 +1,16 @@
 "use client";
+
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import { useMediaQuery } from "react-responsive";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 export default function GiraffeHighlightSwiper() {
     const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
 
-    const slides = [
-        "/giraffe.png",
-        "/preview.png",
-        "/Pic.png"
-    ];
+    const slides = ["/giraffe.png", "/preview.png", "/Pic.png"];
 
     return (
         <section className="w-full bg-white px-4 pt-8">
@@ -45,9 +43,13 @@ export default function GiraffeHighlightSwiper() {
                             </SwiperSlide>
                         ))}
 
-                        {/* Custom arrows */}
-                        <div className="swiper-button-prev text-black text-[24px] w-8 h-8 left-2 top-1/2 transform -translate-y-1/2 z-10"></div>
-                        <div className="swiper-button-next text-black text-[24px] w-8 h-8 right-2 top-1/2 transform -translate-y-1/2 z-10"></div>
+                        {/* Custom arrows with icons */}
+                        <div className="swiper-button-prev bg-white text-black rounded-full shadow-md w-10 h-10 flex items-center justify-center absolute left-2 top-1/2 -translate-y-1/2 z-10">
+                            <FaChevronLeft className="text-lg" />
+                        </div>
+                        <div className="swiper-button-next bg-white text-black rounded-full shadow-md w-10 h-10 flex items-center justify-center absolute right-2 top-1/2 -translate-y-1/2 z-10">
+                            <FaChevronRight className="text-lg" />
+                        </div>
                     </Swiper>
                 </div>
             ) : (
