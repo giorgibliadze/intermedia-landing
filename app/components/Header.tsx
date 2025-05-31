@@ -11,7 +11,7 @@ import MobileNavBar from './MobileNavBar';
 
 export default function Header() {
     return (
-        <header className="w-full h-[79px] md:h-[64px] border-b border-[#E5E5E5] bg-white items-center">
+        <header className="w-full h-[79px] md:h-[64px] border-b border-[#E5E5E5] bg-white items-center justify-center">
 
             <div className="w-[100%] max-w-[100%] px-[0px] md:px-[44px] pb-[24px] flex flex-col isolate relative">
 

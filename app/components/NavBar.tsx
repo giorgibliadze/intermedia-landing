@@ -25,7 +25,7 @@ export default function NavBar() {
                     <a
                         key={index}
                         href="#"
-                        className="flex items-center text-[#636363] font-medium text-[16px] leading-[18px] font-inter hover:text-black transition-colors"
+                        className="flex items-center text-[#636363] font-medium text-[15px] leading-[18px] font-inter hover:text-black transition-colors"
                     >
                         {link}
                     </a>

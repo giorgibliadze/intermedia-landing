@@ -23,9 +23,9 @@ const FullContentCard: FC<FullContentCardProps> = ({
   avatarUrl,
 }) => {
   return (
-    <div className="flex flex-col gap-4 max-w-[646px] w-full bg-white rounded-md">
+    <div className="flex flex-col gap-4 max-w-[646px] p-0 md:p-4 justify-center w-full bg-white rounded-md">
       {/* Title + Category */}
-      <div className="flex flex-col gap-2 px-2">
+      <div className="flex flex-col gap-3">
         <h2 className="text-[18px] leading-6 font-semibold text-[#4E4E4E]">
           {title}
         </h2>
@@ -35,7 +35,7 @@ const FullContentCard: FC<FullContentCardProps> = ({
       </div>
 
       {/* Image */}
-      <div className="relative w-full h-[280px]">
+      <div className="relative w-full h-[280px] px-[20px]">
         <Image src={imageUrl} alt={title} fill className="object-cover rounded-md" />
       </div>
 

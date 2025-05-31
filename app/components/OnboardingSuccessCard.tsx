@@ -10,7 +10,7 @@ const checklist = [
 
 export default function OnboardingSuccessCard() {
     return (
-        <div className="max-w-xl w-full bg-white rounded-[12px] border border-black/10 px-6 py-8 shadow-md relative overflow-hidden">
+        <div className="max-w-xl w-full bg-white rounded-[12px] px-6 py-8 relative overflow-hidden">
             {/* Decorative top-right border pattern */}
             <div className="absolute top-0 right-0 p-4">
                 <div className="grid grid-cols-1 gap-[6px]">
