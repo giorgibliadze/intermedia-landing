@@ -7,7 +7,7 @@ const SearchBar = () => {
     return (
         <>
             {/* Mobile version: visible only on small screens */}
-            <div className="md:hidden flex items-center gap-2 px-4 h-8 border border-white rounded-full text-[#BDBDBD] text-sm font-normal">
+            <div className="md:hidden flex items-center gap-2 px-4 h-8 border border-white rounded-full text-black text-sm font-normal">
                 <Search className="w-4 h-4 text-black" />
                 <span>მოძებნე</span>
             </div>
