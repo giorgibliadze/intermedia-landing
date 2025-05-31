@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { FaFacebookF, FaInstagram, FaXTwitter } from "react-icons/fa6";
 
 const socialLinks = [
@@ -15,23 +16,27 @@ export default function Footer() {
                 {/* Social Icons */}
                 <div className="flex items-center justify-center gap-6 sm:gap-8">
                     {socialLinks.map(({ href, Icon }) => (
-                        <a
-                            key={href}
-                            href={href}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="w-10 h-10 sm:w-12 sm:h-12 border border-[#4E5B76] text-[#4E5B76] rounded-full flex items-center justify-center transition hover:bg-[#4E5B76] hover:text-white active:scale-95"
-                        >
-                            <Icon className="text-lg sm:text-xl" />
-                        </a>
+                        <Link key={href} href={href} passHref legacyBehavior>
+                            <a
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="w-10 h-10 sm:w-12 sm:h-12 border border-[#4E5B76] text-[#4E5B76] rounded-full flex items-center justify-center transition hover:bg-[#4E5B76] hover:text-white active:scale-95"
+                            >
+                                <Icon className="text-lg sm:text-xl" />
+                            </a>
+                        </Link>
                     ))}
                 </div>
 
-                {/* Links */}
+                {/* Internal Page Links */}
                 <div className="flex flex-col sm:flex-row items-center gap-2 text-[#4E5B76] text-sm">
-                    <p className="hover:underline cursor-pointer">წესები და პირობები</p>
+                    <Link href="/terms" className="hover:underline cursor-pointer">
+                        წესები და პირობები
+                    </Link>
                     <span className="hidden sm:inline-block">|</span>
-                    <p className="hover:underline cursor-pointer">კონფიდენციალურობის პოლიტიკა</p>
+                    <Link href="/privacy" className="hover:underline cursor-pointer">
+                        კონფიდენციალურობის პოლიტიკა
+                    </Link>
                 </div>
 
                 {/* Copyright */}
