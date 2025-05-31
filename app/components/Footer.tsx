@@ -19,6 +19,7 @@ export default function Footer() {
                         <a
                             key={href}
                             href={href}
+                            aria-label="Visit our social page"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="w-10 h-10 sm:w-12 sm:h-12 border border-[#4E5B76] text-[#4E5B76] rounded-full flex items-center justify-center transition hover:bg-[#4E5B76] hover:text-white active:scale-95"
