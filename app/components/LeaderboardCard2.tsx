@@ -31,7 +31,7 @@ const LeaderboardCard2: FC<LeaderboardCard2Props> = ({ name, stats, imageUrl }) 
                 <div className="flex bg-white rounded-full p-[2px]">
                     <FileText className="w-4 h-4 text-[#4E5B76]" />
                 </div>
-                <span className="flex items-cente">{stats} სტატია</span>
+                <span className="flex items-center">{stats} სტატია</span>
             </div>
         </div>
     );

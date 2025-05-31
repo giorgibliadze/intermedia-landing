@@ -26,6 +26,7 @@ const ArticleCard: FC<ArticleCardProps> = ({
                     alt={title}
                     fill
                     className="object-cover"
+                    priority
                 />
             </div>
             <div className="p-4 text-black">
@@ -39,6 +40,7 @@ const ArticleCard: FC<ArticleCardProps> = ({
                         width={24}
                         height={24}
                         className="rounded-full object-cover"
+                        priority
                     />
                     <span>{author}</span>
                     <span className="w-[3px] h-[3px] bg-black rounded-full" />

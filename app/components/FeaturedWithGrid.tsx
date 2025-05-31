@@ -28,6 +28,7 @@ export default function FeaturedWithGrid() {
             alt={featuredArticle.title}
             fill
             className="object-cover"
+            priority
           />
         </div>
         <div className="flex flex-col justify-center">

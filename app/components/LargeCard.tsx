@@ -52,6 +52,7 @@ const FullContentCard: FC<FullContentCardProps> = ({
           width={24}
           height={24}
           className="rounded-full"
+          priority
         />
         <span className="text-[9px] font-medium text-[#2E2E2E]">{author}</span>
         <span className="w-[3px] h-[3px] bg-[#3A3A3A] rounded-full"></span>
