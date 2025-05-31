@@ -29,7 +29,7 @@ const FullContentCard: FC<FullContentCardProps> = ({
         <h2 className="text-[18px] leading-6 font-semibold text-[#4E4E4E]">
           {title}
         </h2>
-        <div className="inline-flex items-center justify-center px-3 py-[3px] border border-[#2E2E2E99] rounded-md w-fit text-[10.5px] text-[#1A1A1A]">
+        <div className="hidden md:inline-flex items-center justify-center px-3 py-[3px] border border-[#2E2E2E99] rounded-md w-fit text-[10.5px] text-[#1A1A1A]">
           {category}
         </div>
       </div>
