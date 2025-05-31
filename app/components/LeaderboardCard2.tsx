@@ -27,11 +27,11 @@ const LeaderboardCard2: FC<LeaderboardCard2Props> = ({ name, stats, imageUrl }) 
             <div className="mt-6 text-[18px] font-medium leading-[20px]">{name}</div>
 
             {/* Stats */}
-            <div className="flex items-center gap-2 mt-2 text-sm">
-                <div className="bg-white rounded-full p-[2px]">
+            <div className="items-center gap-2 mt-2 text-sm">
+                <div className="flex bg-white rounded-full p-[2px]">
                     <FileText className="w-4 h-4 text-[#4E5B76]" />
                 </div>
-                <span>{stats} სტატია</span>
+                <span className="flex items-cente">{stats} სტატია</span>
             </div>
         </div>
     );
