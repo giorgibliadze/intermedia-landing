@@ -32,7 +32,7 @@ const ArticleCard: FC<ArticleCardProps> = ({
                 <h3 className="text-[15px] leading-[20px] font-semibold mb-2">
                     {title}
                 </h3>
-                <div className="flex items-center gap-2 text-sm text-[#BDBDBD]">
+                <div className="flex items-center gap-2 text-sm text-black">
                     <Image
                         src={avatarUrl}
                         alt={author}
@@ -41,7 +41,7 @@ const ArticleCard: FC<ArticleCardProps> = ({
                         className="rounded-full object-cover"
                     />
                     <span>{author}</span>
-                    <span className="w-[3px] h-[3px] bg-[#BDBDBD] rounded-full" />
+                    <span className="w-[3px] h-[3px] bg-black rounded-full" />
                     <span>{date}</span>
                 </div>
             </div>

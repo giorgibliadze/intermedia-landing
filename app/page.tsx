@@ -51,9 +51,9 @@ export default function Home() {
         <ArticleGridSection />
       </div>
       <FeaturedWithGrid />
-      
-        <LeaderboardSection />
-    
+
+      <LeaderboardSection />
+
     </>
   );
 }

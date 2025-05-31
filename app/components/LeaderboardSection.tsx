@@ -38,7 +38,7 @@ export default function LeaderboardSection() {
 
             <section className="w-full bg-white px-4 py-8">
                 <GiraffeHighlightSwiper />
-                <div className="max-w-full mx-auto grid grid-cols-2 md:grid-col-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 bg-white">
+                <div className="max-w-full mx-auto grid grid-cols-2 md:grid-col-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 bg-white text-black">
                     {leaderboardData.map((user, index) => (
                         <LeaderboardCard
                             key={index}
