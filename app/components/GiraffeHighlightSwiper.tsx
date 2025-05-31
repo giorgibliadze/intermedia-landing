@@ -75,7 +75,7 @@ export default function GiraffeHighlightSwiper() {
                     <div className="flex flex-col gap-6">
                         {["/preview.png", "/Pic.png"].map((src, i) => (
                             <div key={i} className="relative w-full h-[35%] rounded-md overflow-hidden">
-                                <img src={src} alt="preview" className="object-cover w-full h-[35%]" />
+                                <img src={src} alt="preview" className="object-cover w-full h-full" />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent p-4 flex flex-col justify-end">
                                     <h3 className="text-white text-base font-medium mb-1">
                                         ვინ იყო ვახტანგ გორგასლის დედა?
