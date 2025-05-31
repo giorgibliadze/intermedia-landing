@@ -36,7 +36,7 @@ const FullContentCard: FC<FullContentCardProps> = ({
 
       {/* Image */}
       <div className="relative w-full h-[280px] px-[20px]">
-        <Image src={imageUrl} alt={title} fill className="object-cover rounded-md" />
+        <Image src={imageUrl} alt={title} fill className="object-cover rounded-md w-full h-full" />
       </div>
 
       {/* Excerpt */}
