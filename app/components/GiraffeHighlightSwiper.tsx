@@ -22,7 +22,7 @@ export default function GiraffeHighlightSwiper() {
         <section className="w-full bg-white px-4 pt-8">
             {isMobile ? (
                 <div className="relative max-w-[400px] mx-auto">
-                    <div className="relative w-full h-[400px] rounded-xl overflow-hidden">
+                    <div className="relative w-full h-[500px] rounded-xl overflow-hidden">
                         <img
                             src={slides[current]}
                             alt={`slide-${current}`}
@@ -58,7 +58,7 @@ export default function GiraffeHighlightSwiper() {
             ) : (
                 <div className="max-w-[1300px] min-h-[500px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
                     <div className="relative w-full h-[500px] rounded-md overflow-hidden">
-                        <img src="/giraffe.png" alt="highlight" className="object-cover w-full h-full" />
+                        <img src="/giraffe.png" alt="highlight" className="object-cover w-full h-[500px]" />
                         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent p-4 flex flex-col justify-end">
                             <h3 className="text-white text-lg font-semibold mb-2">
                                 ვინ იყო ვახტანგ გორგასლის დედა?
@@ -75,7 +75,7 @@ export default function GiraffeHighlightSwiper() {
                     <div className="flex flex-col gap-6">
                         {["/preview.png", "/Pic.png"].map((src, i) => (
                             <div key={i} className="relative w-full h-[35%] rounded-md overflow-hidden">
-                                <img src={src} alt="preview" className="object-cover w-full h-full" />
+                                <img src={src} alt="preview" className="object-cover w-full h-[35%]" />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent p-4 flex flex-col justify-end">
                                     <h3 className="text-white text-base font-medium mb-1">
                                         ვინ იყო ვახტანგ გორგასლის დედა?
