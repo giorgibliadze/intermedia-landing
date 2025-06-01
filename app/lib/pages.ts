@@ -1,4 +1,10 @@
-export const pages = [
+export type Page = {
+    slug: string;
+    title: string;
+    content: string;
+};
+
+export const pages: Page[] = [
     {
         slug: "table",
         title: "სამაგიდო",
@@ -54,10 +60,8 @@ export const pages = [
         title: "ვიდეო",
         content: "იხილეთ ვიდეო მასალები სხვადასხვა თემებზე.",
     },
-
-    // ...add as many as needed
 ];
 
-export function getPageBySlug(slug: string) {
+export function getPageBySlug(slug: string): Page | undefined {
     return pages.find((p) => p.slug === slug);
 }
