@@ -1,14 +1,20 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useMediaQuery } from "react-responsive";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import Image from "next/image";
+
 const slides = ["/giraffe.png", "/preview.png", "/Pic.png"];
 
 export default function GiraffeHighlightSwiper() {
+    const [hasMounted, setHasMounted] = useState(false);
     const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
     const [current, setCurrent] = useState(0);
+
+    useEffect(() => {
+        setHasMounted(true);
+    }, []);
 
     const prevSlide = () => {
         setCurrent((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
@@ -18,6 +24,9 @@ export default function GiraffeHighlightSwiper() {
         setCurrent((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
     };
 
+    // Prevent hydration mismatch
+    if (!hasMounted) return null;
+
     return (
         <section className="w-full bg-white px-4 pt-8 mb-[30px]">
             {isMobile ? (
@@ -26,12 +35,11 @@ export default function GiraffeHighlightSwiper() {
                         <Image
                             src={slides[current]}
                             alt={`slide-${current}`}
-                            width={800} // or adjust as needed
-                            height={400} // or adjust as needed
+                            width={800}
+                            height={400}
                             className="object-cover w-full h-full"
                             priority
                         />
-
                         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent p-4 flex flex-col justify-end">
                             <h3 className="text-white text-xl font-semibold mb-2">
                                 ვინ იყო ვახტანგ გორგასლის დედა?
@@ -65,7 +73,7 @@ export default function GiraffeHighlightSwiper() {
                         <Image
                             src="/giraffe.png"
                             alt="highlight"
-                            width={1300}  // Or whatever your container width is
+                            width={1300}
                             height={500}
                             className="object-cover w-full h-[500px]"
                             priority
