@@ -1,5 +1,6 @@
 
 import { CheckCircle2 } from "lucide-react";
+import Link from "next/link";
 
 const checklist = [
     { label: "გასდო ავტორი", active: true },
@@ -41,9 +42,11 @@ export default function OnboardingSuccessCard() {
             </ul>
 
             {/* Action Button */}
-            <button className="px-6 py-2 border border-black rounded-md text-[15px] text-black font-medium hover:bg-black hover:text-white transition">
-                დანერგე სტატია
-            </button>
+            <Link href="/create-article">
+                <button className="px-6 py-2 border border-black rounded-md text-[15px] text-black font-medium hover:bg-black hover:text-white transition">
+                    დანერგე სტატია
+                </button>
+            </Link>
 
             {/* Decorative bottom lines */}
             <div className="absolute bottom-3 right-3 space-y-2">
