@@ -1,18 +1,20 @@
+'use client';
 
-import { ChevronDown } from "lucide-react";
+import Link from 'next/link';
+import { ChevronDown } from 'lucide-react';
 
 const navLinks = [
-    'სამაგიდო',
-    'პოლიტიკა',
-    'ეკონომიკა',
-    'სპორტი',
-    'მზესუმზირა',
-    'მოდა',
-    'კულტურა',
-    'გართობა',
-    'ბლოგი',
-    'ტექ',
-    'ვიდეო',
+    { label: 'სამაგიდო', href: '/table' },
+    { label: 'პოლიტიკა', href: '/politics' },
+    { label: 'ეკონომიკა', href: '/economy' },
+    { label: 'სპორტი', href: '/sports' },
+    { label: 'მზესუმზირა', href: '/sunflower' },
+    { label: 'მოდა', href: '/fashion' },
+    { label: 'კულტურა', href: '/culture' },
+    { label: 'გართობა', href: '/fun' },
+    { label: 'ბლოგი', href: '/blog' },
+    { label: 'ტექ', href: '/tech' },
+    { label: 'ვიდეო', href: '/video' },
 ];
 
 export default function NavBar() {
@@ -21,18 +23,18 @@ export default function NavBar() {
             {/* Main Links */}
             <div className="flex gap-4">
                 {navLinks.map((link, index) => (
-                    <a
+                    <Link
                         key={index}
-                        href="#"
+                        href={link.href}
                         className="flex items-center text-[#636363] font-medium text-[15px] leading-[18px] font-inter hover:text-black transition-colors"
                     >
-                        {link}
-                    </a>
+                        {link.label}
+                    </Link>
                 ))}
             </div>
 
             {/* More with icon */}
-            <div className="flex items-center w-[57px] h-[19px] relative">
+            <div className="flex items-center w-[57px] h-[19px] relative cursor-pointer">
                 <span className="text-[#202020] font-medium text-[16px] leading-[18px] font-inter">
                     More
                 </span>
