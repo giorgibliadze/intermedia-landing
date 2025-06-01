@@ -42,7 +42,7 @@ export default function OnboardingSuccessCard() {
             </ul>
 
             {/* Action Button */}
-            <Link href="/create-article">
+            <Link href="/create-article" passHref>
                 <button className="px-6 py-2 border border-black rounded-md text-[15px] text-black font-medium hover:bg-black hover:text-white transition">
                     დანერგე სტატია
                 </button>
